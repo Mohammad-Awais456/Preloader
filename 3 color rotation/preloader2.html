@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMage preloader</title>
+    <style>
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#pre_main{
+display: flex;
+justify-content: center;
+position: fixed;
+width: 100%;
+height: 100%;
+z-index: 234324;
+align-items: center;
+flex-direction: column;
+background-color: rgb(255, 255, 255);
+}
+
+#pre_inner{
+
+animation-name: pre_loder;
+animation-timing-function: linear;
+animation-delay: 0s;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+
+
+}
+@keyframes pre_loder {
+    0%{
+        transform: rotate(0deg);
+        
+    }
+    100%{
+        
+        transform: rotate(-360deg);
+    }
+    
+}
+@media only screen and (min-width:0px) and (max-width:770px){
+
+    #preloader_image{
+width: 150px !important;
+    }
+   
+}
+
+    </style>
+</head>
+<body>
+<div id="pre_main">
+
+<div id="pre_inner">
+<img id="preloader_image" src="./loaderimg.png" alt="loader" >
+</div>
+
+</div>
+
+    
+</body>
+</html>
